@@ -1,0 +1,194 @@
+{% extends "core/base.html" %}
+{% load static %}
+{% block title %}Inicio{% endblock title %}
+{% block styles %}
+    {% for css_file in css_files %}
+        <link rel="stylesheet" href="{% static css_file %}">
+    {% endfor %}
+{% endblock styles %}
+
+{% block scripts %}
+    {% for js_file in js_files %}
+        <script src="{% static js_file %}"></script>
+    {% endfor %}
+{% endblock scripts %}
+
+{% block content %}
+<div
+      class="container-fluid qt-welcome-bg px-5 d-flex"
+      style="min-height: 100vh;"
+    >
+      <div class="row">
+        <div
+          class="col-sm-12 col-md-7 text-center align-self-center order-1 order-sm-2 px-md-5 mb-sm-4 mb-lg-0"
+        >
+          <h1 class="text-light mb-4" id="title-typing">Lorem Ipsum pudor</h1>
+          <p class="text-light">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+            scelerisque est vel leo dapibus pretium. Phasellus ex est, convallis
+            a interdum eu, euismod et dolor. Nam velit orci, accumsan a
+            porttitor nec, rutrum non ex. Etiam condimentum scelerisque ante.
+            Aliquam non sem non sapien congue lacinia. Nulla sed aliquam
+            velit.&nbsp;
+          </p>
+          <div class="qt-arrow qt-arrow-bounce">
+            <a class="display-4 qt-header-arrow" href="#quienesSomos"
+              ><i class="fas fa-chevron-down"></i
+            ></a>
+          </div>
+        </div>
+        <div
+          class="col-sm-12 col-md-5 text-center align-self-center order-sm-1"
+        >
+          <img
+            class="img-fluid rubberBand animated"
+            src="{% static 'core/assets/img/global/quetziLogo-original.png' %}"
+            loading="lazy"
+            width="400px"
+            alt="QuetziLabs"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- Start: 1 Row 1 Column -->
+    <div id="quienesSomos" class="mb-4">
+      <div class="container mt-5">
+        <div class="row">
+          <div
+            class="col-12"
+            data-aos="zoom-in"
+            data-aos-once="true"
+            data-aos-delay="100"
+          >
+            <h1 class="text-center mb-4"><strong>¿Quiénes Somos?</strong></h1>
+            <div class="px-0 px-md-5">
+              <p class="text-center">
+                Somos una empresa fundada en 2020 con el propósito de crear
+                software de calidad, en tiempo y en forma. Dirigido para toda
+                PyME o grande empresa que necesite una página web o software a
+                la media.
+              </p>
+            </div>
+          </div>
+          <div
+            class="col-12 mt-5"
+            data-aos="zoom-in"
+            data-aos-once="true"
+            data-aos-delay="100"
+          >
+            <h3 class="text-center"><strong>¿Qué ofrecemos?</strong></h3>
+            <div class="px-0 px-md-5"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End: 1 Row 1 Column -->
+    <!-- Start: Features Clean -->
+    <div
+      class="features-clean"
+      data-aos="zoom-in"
+      data-aos-once="true"
+      data-aos-delay="100"
+    >
+      <div class="container">
+        <!-- Start: Features -->
+        <div class="row features">
+          {% for offers in our_offers %}
+            <div class="col-sm-6 col-lg-4 item">
+              <i class="{{offers.icon}} icon"></i>
+              <h3 class="name">{{offers.title}}</h3>
+              <p class="description">
+                {{offers.description|safe}}
+              </p>
+            </div>
+          {% endfor %}
+        </div>
+        <!-- End: Features -->
+      </div>
+    </div>
+    <!-- End: Features Clean -->
+    <!-- Start: QuetziAdminBanner -->
+    <div class="highlight-phone">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-md-8"
+            data-aos="zoom-in-right"
+            data-aos-once="true"
+            data-aos-delay="500"
+          >
+            <!-- Start: Intro -->
+            <div class="intro">
+              <div class="qt-quetziAdmin-logo">
+                <h1 class="quetzi display-4 text-light">Quetzi</h1>
+                <h1 class="display-4 text-light admin">Admin</h1>
+              </div>
+              <h3 class="text-primary">Olvidate de administrar tu sitio</h3>
+              <p class="text-white" style="font-size: 16px;">
+                Nuestro sistema administrativo te ayudará a pedir cambios o
+                reportar algún problema con tu sitio web o sofware, ádemas de
+                que si requieres algun cambio poder pedirlo.
+              </p>
+            </div>
+            <!-- End: Intro --><button
+              class="qt-btn-sp qt-btn-rb qt-offset qt-orange"
+            >
+              Entrar a QuetziAdmin
+            </button>
+          </div>
+          <div
+            class="col-sm-4"
+            data-aos="zoom-in-left"
+            data-aos-once="true"
+            data-aos-delay="250"
+          >
+            <!-- Start: Smartphone -->
+            <div class="d-none d-md-block iphone-mockup">
+              <img
+                class="device"
+                src="{% static 'core/assets/img/index/iphone.svg' %}"
+              />
+              <div class="screen"></div>
+            </div>
+            <!-- End: Smartphone -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End: QuetziAdminBanner -->
+    <!-- Start: 1 Row 1 Column -->
+    <div>
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-12">
+            <h1 class="text-center mb-4"><strong>Contactanos</strong></h1>
+            <div class="text-center px-0 px-md-5">
+              <h4>¿Atención personalizada? Con gusto te atendemos</h4>
+              <img
+                class="img-fluid mt-2 mb-3"
+                src="https://picsum.photos/200"
+              />
+              <h2>Mandanos un&nbsp;<a href="#">mensaje aquí</a></h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End: 1 Row 1 Column -->
+    <!-- Start: Social Icons -->
+    <div class="social-icons">
+      <div class="container mb-4">
+        <div class="row">
+          <div class="col">
+            <h1 class="text-capitalize text-center">
+              <strong>Siguenos en redes sociales</strong>
+            </h1>
+          </div>
+        </div>
+      </div>
+      {% for social in SOCIAL_DATA %}
+        <a href="{{social.link}}"><i class="{{social.icon}}"></i></a>
+      {% endfor %}
+    </div>
+    <!-- End: Social Icons -->
+{% endblock content %}

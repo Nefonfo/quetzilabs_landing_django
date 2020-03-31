@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang = 'es'>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>{% block title %}{% endblock title %} | QuetziLabs</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'core/assets/bootstrap/css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'core/assets/css/global/global.css' %}" />
+    <link rel="stylesheet" href="{% static 'core/assets/fonts/fontawesome-all.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'core/assets/fonts/font-awesome.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'core/assets/fonts/fontawesome5-overrides.min.css' %}" />
+{% block styles %}
+{% endblock styles %}
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat:200,400,700,900"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Start: Navigation with Search -->
+    <nav
+      class="navbar navbar-dark navbar-expand-lg sticky-top bg-secondary navigation-clean-search better-bootstrap-nav-left"
+    >
+      <div class="container">
+        <button
+          data-toggle="collapse"
+          class="navbar-toggler qt-menu-btn"
+          data-target="#navcol-1"
+        >
+          <span class="sr-only">Navigation</span
+          ><span class="navbar-toggler-icon"></span></button
+        ><a href="index.html"
+          ><img
+            src="{% static 'core/assets/img/global/logo.png' %}"
+            style="width: 10rem;"
+            loading="eager"
+            href="index.html"
+        /></a>
+        <div class="collapse navbar-collapse" id="navcol-1">
+          <img
+            class="d-sm-block d-md-none d-xl-none"
+            src="{% static 'core/assets/img/global/logo.png' %}"
+            style="width: 10rem;"
+          />
+          <ul class="nav navbar-nav mx-auto">
+            <li class="nav-item" role="presentation">
+              <a class="nav-link active" href="nosotros.html">Nosotros</a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link active" href="index.html">Servicios</a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link active" href="index.html">Paquetes Web</a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link active" href="index.html">Contacto</a>
+            </li>
+          </ul>
+          <div class="btn-group" role="group" style="display: none;">
+            <button class="btn btn-primary" type="button">
+              Acceder a QuetziAdmin</button
+            ><button class="btn btn-primary" type="button">AdminPage</button>
+          </div>
+          {% if request.user.is_staff %}
+            <a
+            class="qt-btn-nav qt-btn-sp qt-slide qt-primary"
+            role="button"
+            href="{% url 'admin:index' %}"
+            >
+              Administrar - {{request.user}}
+            </a>
+          {% else %}
+            <button
+            class="qt-btn-nav qt-btn-sp qt-slide qt-primary"
+            role="button"
+            href="#"
+            >
+              Acceder a QuetziAdmin
+            </button>
+          {% endif %}
+        </div>
+      </div>
+    </nav>
+    <!-- End: Navigation with Search -->
+    {% block content %}
+    {% endblock content %}
+    <!-- Start: QuetziFooter -->
+    <div class="footer-dark">
+      <div class="container">
+        <div class="row">
+          <div class="col text-center">
+            <img
+              src="{% static 'core/assets/img/global/logo.png' %}"
+            />
+          </div>
+        </div>
+      </div>
+      <!-- Start: Footer Content -->
+      <footer>
+        <div class="container">
+          <div class="row text-center mb-5" style="margin-top:20px;">
+            <!-- Start: Company Tagline -->
+            <div class="col-12 item text mb-5 text-center" style="margin-bottom:0px;">
+              <p>
+                Lorem ipsum pudor dajnsdjsadna ksndjksadnjaksdnas dnasjkdn
+                sajdnsajkdnjks adnjaksndsa.
+              </p>
+            </div>
+            <!-- End: Company Tagline -->
+            <!-- Start: About -->
+            <div class="col-sm-6 col-md-4 item">
+              <h3>Contacto con:</h3>
+              <ul>
+                {% for contact in CONTACT_DATA %}
+                  <li class="text-truncate">{{contact.name}}</li>
+                {% endfor %}
+              </ul>
+            </div>
+            <div class="col-sm-6 col-md-4 item">
+              <h3>Teléfonos</h3>
+              <ul>
+                {% for contact in CONTACT_DATA %}
+                  <li>{{contact.phone}}</li>
+                {% endfor %}
+              </ul>
+            </div>
+            <!-- End: About -->
+            <!-- Start: Services -->
+            <div class="col-sm-6 col-md-4 item">
+              <h3>Correos</h3>
+              <ul>
+                {% for contact in CONTACT_DATA %}
+                  <li>{{contact.email}}</li>
+                {% endfor %}
+              </ul>
+            </div>
+            <!-- End: Services -->
+          </div>
+          <!-- Start: Social Icons -->
+          <div class="col item social" style="margin-top:15px;">
+            {% for social in SOCIAL_DATA %}
+              <a href="{{social.link}}"><i class="{{social.icon}}"></i></a>
+            {% endfor %}
+          </div>
+          <!-- End: Social Icons -->
+        </div>
+        <!-- Start: Divider -->
+        <div style="margin-top:-40px;">
+          <h2 class="divider-style"></h2>
+          <!-- Start: Copyright -->
+          <p class="copyright">QuetziLabs © 2020</p>
+          <!-- End: Copyright -->
+        </div>
+        <!-- End: Divider -->
+      </footer>
+      <!-- End: Footer Content -->
+    </div>
+    <!-- End: QuetziFooter -->
+    <!--global-->
+    <script src="{% static 'core/assets/js/jquery.min.js' %}"></script>
+    <script src="{% static 'core/assets/bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'core/assets/js/bs-init.js' %}"></script>
+    <script src="{% static 'core/assets/js/global/global.js' %}"></script>
+    <script src="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.js"></script>
+    <script
+      src="https://unpkg.com/aos@2.3.1/dist/aos.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--index-->
+    {% block scripts %}
+    {% endblock scripts %}
+  </body>
+</html>

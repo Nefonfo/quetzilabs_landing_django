@@ -1,0 +1,282 @@
+.features-clean {
+    color: #313437;
+    background-color: #fff;
+    padding-bottom: 30px;
+  }
+  
+  @media (max-width:767px) {
+    .features-clean {
+      padding-bottom: 10px;
+    }
+  }
+  
+  .features-clean p {
+    color: #7d8285;
+  }
+  
+  .features-clean h2 {
+    font-weight: bold;
+    margin-bottom: 40px;
+    padding-top: 40px;
+    color: inherit;
+  }
+  
+  @media (max-width:767px) {
+    .features-clean h2 {
+      margin-bottom: 25px;
+      padding-top: 25px;
+      font-size: 24px;
+    }
+  }
+  
+  .features-clean .intro {
+    font-size: 16px;
+    max-width: 500px;
+    margin: 0 auto 60px;
+  }
+  
+  @media (max-width:767px) {
+    .features-clean .intro {
+      margin-bottom: 40px;
+    }
+  }
+  
+  .features-clean .item {
+    min-height: 100px;
+    padding-left: 80px;
+    margin-bottom: 40px;
+  }
+  
+  @media (max-width:767px) {
+    .features-clean .item {
+      min-height: 0;
+    }
+  }
+  
+  .features-clean .item .name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: inherit;
+  }
+  
+  .features-clean .item .description {
+    font-size: 15px;
+    margin-bottom: 0;
+  }
+  
+  .features-clean .item .icon {
+    font-size: 40px;
+    color: #ffa147;
+    float: left;
+    margin-left: -65px;
+  }
+  
+  .social-icons {
+    color: #313437;
+    background-color: #fff;
+    text-align: center;
+    padding: 70px 0;
+  }
+  
+  @media (max-width:767px) {
+    .social-icons {
+      padding: 50px 0;
+    }
+  }
+  
+  .social-icons i {
+    font-size: 32px;
+    display: inline-block;
+    color: #757980;
+    margin: 0 10px;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #c8ced7;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 60px;
+  }
+  
+  .highlight-phone {
+    color: #313437;
+    background-color: #2c393f;
+    padding: 50px 0 55px;
+    overflow: hidden;
+  }
+  
+  @media (max-width:767px) {
+    .highlight-phone {
+      text-align: center;
+    }
+  }
+  
+  .highlight-phone p {
+    color: #7d8285;
+  }
+  
+  .highlight-phone .intro {
+    font-size: 18px;
+    max-width: 500px;
+    line-height: 1.5;
+  }
+  
+  @media (max-width:767px) {
+    .highlight-phone .intro {
+      max-width: none;
+    }
+  }
+  
+  .highlight-phone .intro p {
+    margin-bottom: 35px;
+  }
+  
+  .highlight-phone .iphone-mockup {
+    position: relative;
+    max-width: 260px;
+    margin-top: -30px;
+    margin-bottom: -230px;
+    transform: rotate(-15deg);
+  }
+  
+  .highlight-phone .iphone-mockup img.device {
+    width: 100%;
+    height: auto;
+  }
+  
+  .highlight-phone .iphone-mockup .screen {
+    position: absolute;
+    width: 88%;
+    height: 77%;
+    top: 12%;
+    border-radius: 2px;
+    left: 6%;
+    border: 1px solid #444;
+    background-color: #2c393f !important;
+    overflow: hidden;
+    background: url(../../../assets/img/global/quetziLogo-original.png?h=4388121e7bfe8811d4cfbcd6fe8be174);
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .qt-quetziAdmin-logo .quetzi {
+    font-weight: 300;
+  }
+  
+  .qt-quetziAdmin-logo .admin {
+    background-color: #ffa147;
+    font-weight: 500;
+  }
+  
+  .qt-quetziAdmin-logo {
+    display: flex;
+  }
+  
+  @media (max-width: 576px) {
+    .qt-quetziAdmin-logo {
+      justify-items: center;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  
+  .qt-quetziadmin-btn {
+    border-radius: 2rem;
+  }
+  
+  .btn-grad {
+    background-image: linear-gradient(to right, #F7971E 0%, #FFD200 51%, #F7971E 100%);
+  }
+  
+  .btn-grad:hover {
+    background-position: right center;
+  }
+  
+  .qt-welcome-bg {
+    background: linear-gradient(135deg, #2c393f, #00c7c7);
+    background-color: #00c7c7;
+  }
+  
+  .qt-type-span {
+    border-right: .05em solid;
+    animation: caret 1s steps(1) infinite;
+  }
+  
+  @keyframes caret {
+    50% {
+      border-color: transparent;
+    }
+  }
+  
+  .qt-header-arrow {
+    color: white;
+    transition: color 0.25s ease-in;
+  }
+  
+  .qt-header-arrow:hover {
+    color: orange;
+  }
+  
+  .qt-btn-rb {
+    border-radius: 1rem;
+  }
+  
+  .qt-btn-nav.qt-btn-sp {
+    background: none;
+    border: 2px solid;
+    font: inherit;
+    line-height: 1;
+    margin: 0px;
+    padding: 0.7rem;
+    border-radius: 2rem;
+  }
+  
+  .qt-arrow {
+    text-align: center;
+    margin: 8% 0;
+  }
+  
+  .qt-arrow-bounce {
+    -webkit-animation: arrow-bounce 3s infinite;
+    animation: bounce 3s infinite;
+  }
+  
+  @-webkit-keyframes arrow-bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+    40% {
+      -webkit-transform: translateY(-30px);
+      transform: translateY(-30px);
+    }
+    60% {
+      -webkit-transform: translateY(-15px);
+      transform: translateY(-15px);
+    }
+  }
+  
+  @keyframes arrow-bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+    40% {
+      -webkit-transform: translateY(-30px);
+      transform: translateY(-30px);
+    }
+    60% {
+      -webkit-transform: translateY(-15px);
+      transform: translateY(-15px);
+    }
+  }
+        
